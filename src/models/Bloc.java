@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class Bloc {
     public static final int NBRE_DEMI_JOURS_SEMAINE = 10;
     private final String nom;
+    //Il peut également être final car on ne modifie plus le tableau
     private Modulelnfo[] modules;
 
     public Bloc(String nom) {
@@ -17,6 +18,7 @@ public class Bloc {
         modules [1] = new Modulelnfo("Matu");
         modules [2] = new Modulelnfo("Matu");
         modules [3] = new Modulelnfo("Matu");
+        //MR les autres modules doivent être null et pas avec un module avec le nom null
         modules [4] = new Modulelnfo("null");
         modules [5] = new Modulelnfo("null");
         modules [6] = new Modulelnfo("null");
@@ -39,6 +41,7 @@ public class Bloc {
     }
 
     public boolean planifierModule(Modulelnfo module) {
+        //MR Attention tu fais de la récursivité
         for (int i = 0; i < NBRE_DEMI_JOURS_SEMAINE; i++) {
             if (i == 3) {
                 planifierModule(module);
@@ -85,6 +88,7 @@ public class Bloc {
 
     @Override
     public String toString() {
+        //MR affichage que du nom
         return "Bloc [nom=" + nom ;
     }
 

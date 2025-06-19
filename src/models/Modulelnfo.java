@@ -21,6 +21,7 @@ public class Modulelnfo {
 
     @Override
     public String toString() {
+        //MR Un toString ne fait pas un sout, mais retourne en String
         if (professeur!= null) {
             System.out.println(nom + "avec" + professeur);
         }else{

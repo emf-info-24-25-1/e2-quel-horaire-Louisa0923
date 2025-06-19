@@ -55,6 +55,7 @@ public class Professeur {
 
     @Override
     public String toString() {
+        //MR Il manque le uppercase pour le nom
         return prenom +" " + nom;
     }
 
